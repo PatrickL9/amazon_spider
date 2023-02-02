@@ -32,3 +32,14 @@
 ![img.png](img/img.png)
 ![img_1.png](img/img_1.png)
 ![img_2.png](img/img_2.png)
+
+# 项目运行
+以下2个办法均可以运行程序
+
+1、编译环境，运行`main.py`文件
+
+2、进入项目目录下，命令行执行`scrapy crawl amazon_crawl`
+```
+cd ./amazon_spider
+scrapy crawl amazon_crawl
+```
