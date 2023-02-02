@@ -1,3 +1,6 @@
+# -*- coding: UTF-8 -*-
+#!/usr/bin/python3
+
 # Define here the models for your scraped items
 #
 # See documentation in:

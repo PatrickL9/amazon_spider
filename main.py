@@ -1,3 +1,6 @@
+# -*- coding: UTF-8 -*-
+#!/usr/bin/python3
+
 from scrapy.cmdline import execute
 import os
 import sys

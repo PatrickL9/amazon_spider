@@ -1,3 +1,6 @@
+# -*- coding: UTF-8 -*-
+#!/usr/bin/python3
+
 # Scrapy settings for amazon_spider project
 #
 # For simplicity, this file contains only settings considered important or
@@ -49,8 +52,9 @@ CONCURRENT_REQUESTS = 24
 # 测试环境
 MYSQL_HOST = 'localhost'
 MYSQL_DBNAME = 'craw_data'
-MYSQL_USER = 'craw_data'
+MYSQL_USER = 'root'
 MYSQL_PASSWORD = '12345678'
+MYSQL_PORT = 3306
 
 # log设置
 LOG_LEVEL = 'DEBUG'
@@ -67,10 +71,10 @@ COOKIES_ENABLED = False
 
 # Override the default request headers:
 DEFAULT_REQUEST_HEADERS = {
-  'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+  'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
 ##  'Accept-Language':'zh-CN,zh;q=0.9,en;q=0.8,en-US;q=0.7',
-  'accept-encoding':'gzip, deflate, br',
-  'upgrade-insecure-requests':'1',
+  'accept-encoding': 'gzip, deflate, br',
+  'upgrade-insecure-requests': '1',
 }
 USER_AGENT_LIST = [
     "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.163 Safari/535.1",
@@ -236,4 +240,10 @@ cookie_uk = [
 ]
 cookie_jp = [
     "session-id=355-1510070-9181653; i18n-prefs=JPY; skin=noskin; ubid-acbjp=358-2295867-2654851; session-token=Dwu/wQ1M9v9XDSth+6fGagVyHvANztupnxx75y6shIYgUh2fBQZBFwZ3NHi1ihxbZ8KiCQEmKyQ5ETY3Z927iQaPQg5Crrlml0AenBMTMuu36/Ve0TPu2d+eBLD1sE7hHigxFw+kvvDUiwUdMFTPoQZg2oJnzHm5s18F8YbSAH0EouDh5yuS5tG77PJtLrS59//l9z2fC6GiOGhreT7oFIr+WMgsROH2ROuKNHBJd3k=; session-id-time=2082787201l; lc-acbjp=ja_JP; csm-hit=tb:s-CKKP5WZMH3DVNG2Z8SD5|1672817698872&t:1672817699689&adb:adblk_no",
+]
+cookie_ca = [
+    "session-id=135-8254159-5671745; session-id-time=2082787201l; i18n-prefs=CAD; ubid-acbca=135-6657064-2469964; session-token=bMij5IYsUWHuu0XiUBFk5koH+/IA/b4Wt5BJKeISu5dmphSzTgF6uldPJ14Sxjo6KP0NuvMuAgD04vqqezW8pkJQTzxq8b3vFMmdykrL8QhzSoPvGIkeh6rtzmJvkXayhBM+h8cabxkikhwpiPbWTXir7WLmRa+vfnp5tpWgxIwMSugfcNN21BzK99qIGBiZx/jfc3N24DUVZyeKCW4HZz6J3aPrx561fXcnTRfYf3o=; csm-hit=tb:EG2HPRXEF4RQ8QQ2S288+s-84B8QYSZ046P8FVK0DBZ|1675235227446&t:1675235227446&adb:adblk_yes",
+]
+cookie_mx = [
+    "session-id=146-6540191-2985150; session-id-time=2082787201l; i18n-prefs=MXN; ubid-acbmx=132-8256847-5754533; session-token=l6D3/VNgbnRnq/bNZ1aJYffmlXcA7qXdavc/QeIk/mO4k74zfD04HSF6CvIU1i4ZJlLtpKqOkZ1J7RaqKbWn9OOVdCnr29rW9BZfkIEL8Li23NcKm4Eu/Y7ixsy5OJ9uB/p3FYquWjagerz+S1WwRlYisCbgL8UFAFsWmpwMp9/3wkJXptJ3u0KeNDzKNMd9VWQmrSTTOY7z5a/dPenQSsUkrCDNMCaTTbFKkoBkuWI=; csm-hit=tb:JRNJBMK0WVE6946RZ2RP+s-Q3GSA69Y5C7HAQ0G0015|1675235548826&t:1675235548826&adb:adblk_no",
 ]

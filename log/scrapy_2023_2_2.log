@@ -1,0 +1,1150 @@
+2023-02-02 09:47:17 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: amazon_spider)
+2023-02-02 09:47:17 [scrapy.utils.log] INFO: Versions: lxml 4.9.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.6.8 (tags/v3.6.8:3c6b436a57, Dec 24 2018, 00:16:47) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 3.4.8, Platform Windows-10-10.0.19041-SP0
+2023-02-02 09:47:17 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-02-02 09:47:17 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'amazon_spider',
+ 'CONCURRENT_REQUESTS': 24,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOADER_CLIENT_TLS_CIPHERS': 'DEFAULT:!DH',
+ 'DOWNLOAD_DELAY': 0.8,
+ 'DOWNLOAD_TIMEOUT': 300,
+ 'LOG_FILE': 'log/scrapy_2023_2_2.log',
+ 'NEWSPIDER_MODULE': 'amazon_spider.spiders',
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['amazon_spider.spiders']}
+2023-02-02 09:47:17 [scrapy.extensions.telnet] INFO: Telnet Password: 1bbb8247fe36f853
+2023-02-02 09:47:17 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2023-02-02 09:47:18 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'amazon_spider.middlewares.AmazonSpiderDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'amazon_spider.middlewares.fail_retry_middleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-02-02 09:47:18 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-02-02 09:47:18 [scrapy.middleware] INFO: Enabled item pipelines:
+['amazon_spider.pipelines.MysqlasynPipeline']
+2023-02-02 09:47:18 [scrapy.core.engine] INFO: Spider opened
+2023-02-02 09:47:18 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-02-02 09:47:18 [amazon_crawl] INFO: Spider opened: amazon_crawl
+2023-02-02 09:47:18 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-02-02 09:47:18 [amazon_crawl] DEBUG: ------------获取首批代理ip----------------
+2023-02-02 09:47:18 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): api.xdaili.cn:80
+2023-02-02 09:47:18 [urllib3.connectionpool] DEBUG: http://api.xdaili.cn:80 "GET /xdaili-api//greatRecharge/getGreatIp?spiderId=460e34f07cf041899a22e79353081288&orderno=YZ2021112078186AsWJy&returnType=1&count=5 HTTP/1.1" 200 105
+2023-02-02 09:47:18 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.56 Safari/535.11
+2023-02-02 09:47:18 [amazon_crawl] DEBUG: 更换IP:http://36.27.185.62:33393-----0
+2023-02-02 09:47:18 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+2023-02-02 09:47:18 [amazon_crawl] DEBUG: 更换IP:http://27.151.158.179:49141-----1
+2023-02-02 09:47:18 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; QQDownload 732; .NET4.0C; .NET4.0E; LBBROWSER)
+2023-02-02 09:47:18 [amazon_crawl] DEBUG: 更换IP:http://27.151.157.10:49294-----2
+2023-02-02 09:47:18 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11
+2023-02-02 09:47:18 [amazon_crawl] DEBUG: 更换IP:http://59.60.130.200:49225-----3
+2023-02-02 09:47:18 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; QQBrowser/7.0.3698.400)
+2023-02-02 09:47:18 [amazon_crawl] DEBUG: 更换IP:http://27.151.157.10:49294-----4
+2023-02-02 09:47:18 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1
+2023-02-02 09:47:18 [amazon_crawl] DEBUG: 更换IP:http://59.60.130.200:49225-----5
+2023-02-02 09:47:18 [amazon_crawl] DEBUG: 首次爬取完成，开始数据验证重试
+2023-02-02 09:49:45 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: amazon_spider)
+2023-02-02 09:49:45 [scrapy.utils.log] INFO: Versions: lxml 4.9.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.6.8 (tags/v3.6.8:3c6b436a57, Dec 24 2018, 00:16:47) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 3.4.8, Platform Windows-10-10.0.19041-SP0
+2023-02-02 09:49:45 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-02-02 09:49:45 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'amazon_spider',
+ 'CONCURRENT_REQUESTS': 24,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOADER_CLIENT_TLS_CIPHERS': 'DEFAULT:!DH',
+ 'DOWNLOAD_DELAY': 0.8,
+ 'DOWNLOAD_TIMEOUT': 300,
+ 'LOG_FILE': 'log/scrapy_2023_2_2.log',
+ 'NEWSPIDER_MODULE': 'amazon_spider.spiders',
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['amazon_spider.spiders']}
+2023-02-02 09:49:45 [scrapy.extensions.telnet] INFO: Telnet Password: 25b070e601c108b0
+2023-02-02 09:49:45 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2023-02-02 09:49:45 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'amazon_spider.middlewares.AmazonSpiderDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'amazon_spider.middlewares.fail_retry_middleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-02-02 09:49:45 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-02-02 09:49:45 [scrapy.middleware] INFO: Enabled item pipelines:
+['amazon_spider.pipelines.MysqlasynPipeline']
+2023-02-02 09:49:45 [scrapy.core.engine] INFO: Spider opened
+2023-02-02 09:49:45 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-02-02 09:49:45 [amazon_crawl] INFO: Spider opened: amazon_crawl
+2023-02-02 09:49:45 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-02-02 09:49:45 [amazon_crawl] DEBUG: ------------获取首批代理ip----------------
+2023-02-02 09:49:45 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): api.xdaili.cn:80
+2023-02-02 09:49:45 [urllib3.connectionpool] DEBUG: http://api.xdaili.cn:80 "GET /xdaili-api//greatRecharge/getGreatIp?spiderId=460e34f07cf041899a22e79353081288&orderno=YZ2021112078186AsWJy&returnType=1&count=5 HTTP/1.1" 200 109
+2023-02-02 09:49:45 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.2pre) Gecko/20070215 K-Ninja/2.1.1
+2023-02-02 09:49:45 [amazon_crawl] DEBUG: 更换IP:http://218.1.200.157:33692-----0
+2023-02-02 09:49:45 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; QQDownload 732; .NET4.0C; .NET4.0E)
+2023-02-02 09:49:45 [amazon_crawl] DEBUG: 更换IP:http://223.215.171.229:45296-----1
+2023-02-02 09:49:45 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:16.0) Gecko/20100101 Firefox/16.0
+2023-02-02 09:49:45 [amazon_crawl] DEBUG: 更换IP:http://220.161.243.183:32183-----2
+2023-02-02 09:49:45 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; QQDownload 732; .NET4.0C; .NET4.0E)
+2023-02-02 09:49:45 [amazon_crawl] DEBUG: 更换IP:http://218.1.200.222:33006-----3
+2023-02-02 09:49:45 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; SV1; QQDownload 732; .NET4.0C; .NET4.0E; 360SE)
+2023-02-02 09:49:45 [amazon_crawl] DEBUG: 更换IP:http://218.1.200.222:33006-----4
+2023-02-02 09:49:45 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN; rv:1.9) Gecko/20080705 Firefox/3.0 Kapiko/3.0
+2023-02-02 09:49:45 [amazon_crawl] DEBUG: 更换IP:http://223.215.171.229:45296-----5
+2023-02-02 09:49:45 [amazon_crawl] DEBUG: 首次爬取完成，开始数据验证重试
+2023-02-02 09:50:56 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: amazon_spider)
+2023-02-02 09:50:56 [scrapy.utils.log] INFO: Versions: lxml 4.9.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.6.8 (tags/v3.6.8:3c6b436a57, Dec 24 2018, 00:16:47) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 3.4.8, Platform Windows-10-10.0.19041-SP0
+2023-02-02 09:50:56 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-02-02 09:50:56 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'amazon_spider',
+ 'CONCURRENT_REQUESTS': 24,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOADER_CLIENT_TLS_CIPHERS': 'DEFAULT:!DH',
+ 'DOWNLOAD_DELAY': 0.8,
+ 'DOWNLOAD_TIMEOUT': 300,
+ 'LOG_FILE': 'log/scrapy_2023_2_2.log',
+ 'NEWSPIDER_MODULE': 'amazon_spider.spiders',
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['amazon_spider.spiders']}
+2023-02-02 09:50:56 [scrapy.extensions.telnet] INFO: Telnet Password: 4d0db5a2afe5a42b
+2023-02-02 09:50:56 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2023-02-02 09:50:56 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'amazon_spider.middlewares.AmazonSpiderDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'amazon_spider.middlewares.fail_retry_middleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-02-02 09:50:56 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-02-02 09:50:56 [scrapy.middleware] INFO: Enabled item pipelines:
+['amazon_spider.pipelines.MysqlasynPipeline']
+2023-02-02 09:50:56 [scrapy.core.engine] INFO: Spider opened
+2023-02-02 09:50:56 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-02-02 09:50:56 [amazon_crawl] INFO: Spider opened: amazon_crawl
+2023-02-02 09:50:56 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-02-02 09:50:56 [amazon_crawl] DEBUG: ------------获取首批代理ip----------------
+2023-02-02 09:50:56 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): api.xdaili.cn:80
+2023-02-02 09:50:56 [urllib3.connectionpool] DEBUG: http://api.xdaili.cn:80 "GET /xdaili-api//greatRecharge/getGreatIp?spiderId=460e34f07cf041899a22e79353081288&orderno=YZ2021112078186AsWJy&returnType=1&count=5 HTTP/1.1" 200 109
+2023-02-02 09:50:56 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (X11; U; Linux x86_64; zh-CN; rv:1.9.2.10) Gecko/20100922 Ubuntu/10.10 (maverick) Firefox/3.6.10
+2023-02-02 09:50:56 [amazon_crawl] DEBUG: 更换IP:http://183.165.241.97:46992-----0
+2023-02-02 09:50:56 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)
+2023-02-02 09:50:56 [amazon_crawl] DEBUG: 更换IP:http://122.230.164.234:33961-----1
+2023-02-02 09:50:56 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:16.0) Gecko/20100101 Firefox/16.0
+2023-02-02 09:50:56 [amazon_crawl] DEBUG: 更换IP:http://122.230.164.234:33961-----2
+2023-02-02 09:50:56 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/535.20 (KHTML, like Gecko) Chrome/19.0.1036.7 Safari/535.20
+2023-02-02 09:50:56 [amazon_crawl] DEBUG: 更换IP:http://183.165.241.97:46992-----3
+2023-02-02 09:50:56 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1
+2023-02-02 09:50:56 [amazon_crawl] DEBUG: 更换IP:http://122.230.164.234:33961-----4
+2023-02-02 09:50:56 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (Kresponse, like Gecko) Chrome/91.0.4472.114 Safari/537.36
+2023-02-02 09:50:56 [amazon_crawl] DEBUG: 更换IP:http://182.38.204.75:32834-----5
+2023-02-02 09:50:56 [amazon_crawl] DEBUG: 首次爬取完成，开始数据验证重试
+2023-02-02 09:58:41 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: amazon_spider)
+2023-02-02 09:58:41 [scrapy.utils.log] INFO: Versions: lxml 4.9.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.6.8 (tags/v3.6.8:3c6b436a57, Dec 24 2018, 00:16:47) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 3.4.8, Platform Windows-10-10.0.19041-SP0
+2023-02-02 09:58:41 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-02-02 09:58:41 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'amazon_spider',
+ 'CONCURRENT_REQUESTS': 24,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOADER_CLIENT_TLS_CIPHERS': 'DEFAULT:!DH',
+ 'DOWNLOAD_DELAY': 0.8,
+ 'DOWNLOAD_TIMEOUT': 300,
+ 'LOG_FILE': 'log/scrapy_2023_2_2.log',
+ 'NEWSPIDER_MODULE': 'amazon_spider.spiders',
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['amazon_spider.spiders']}
+2023-02-02 09:58:41 [scrapy.extensions.telnet] INFO: Telnet Password: 105381d4a5debceb
+2023-02-02 09:58:41 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2023-02-02 09:58:41 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'amazon_spider.middlewares.AmazonSpiderDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'amazon_spider.middlewares.fail_retry_middleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-02-02 09:58:41 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-02-02 09:58:41 [scrapy.middleware] INFO: Enabled item pipelines:
+['amazon_spider.pipelines.MysqlasynPipeline']
+2023-02-02 09:58:41 [scrapy.core.engine] INFO: Spider opened
+2023-02-02 09:58:41 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-02-02 09:58:41 [amazon_crawl] INFO: Spider opened: amazon_crawl
+2023-02-02 09:58:41 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-02-02 09:58:41 [amazon_crawl] DEBUG: ------------获取首批代理ip----------------
+2023-02-02 09:58:41 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): api.xdaili.cn:80
+2023-02-02 09:58:41 [urllib3.connectionpool] DEBUG: http://api.xdaili.cn:80 "GET /xdaili-api//greatRecharge/getGreatIp?spiderId=460e34f07cf041899a22e79353081288&orderno=YZ2021112078186AsWJy&returnType=1&count=5 HTTP/1.1" 200 107
+2023-02-02 09:58:41 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11
+2023-02-02 09:58:41 [amazon_crawl] DEBUG: 更换IP:http://27.156.195.66:45112-----0
+2023-02-02 09:58:41 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729
+2023-02-02 09:58:41 [amazon_crawl] DEBUG: 更换IP:http://121.235.195.236:27232-----1
+2023-02-02 09:58:41 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534.57.2 (KHTML, like Gecko) Version/5.1.7 Safari/534.57.2
+2023-02-02 09:58:41 [amazon_crawl] DEBUG: 更换IP:http://59.60.140.177:36731-----2
+2023-02-02 09:58:41 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.16 (KHTML, like Gecko) Chrome/10.0.648.133 Safari/534.16
+2023-02-02 09:58:41 [amazon_crawl] DEBUG: 更换IP:http://27.156.195.66:45112-----3
+2023-02-02 09:58:41 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11
+2023-02-02 09:58:41 [amazon_crawl] DEBUG: 更换IP:http://27.156.195.66:45112-----4
+2023-02-02 09:58:41 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+2023-02-02 09:58:41 [amazon_crawl] DEBUG: 更换IP:http://59.60.140.177:36731-----5
+2023-02-02 09:58:41 [amazon_crawl] DEBUG: 首次爬取完成，开始数据验证重试
+2023-02-02 09:59:32 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: amazon_spider)
+2023-02-02 09:59:32 [scrapy.utils.log] INFO: Versions: lxml 4.9.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.6.8 (tags/v3.6.8:3c6b436a57, Dec 24 2018, 00:16:47) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 3.4.8, Platform Windows-10-10.0.19041-SP0
+2023-02-02 09:59:32 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-02-02 09:59:32 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'amazon_spider',
+ 'CONCURRENT_REQUESTS': 24,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOADER_CLIENT_TLS_CIPHERS': 'DEFAULT:!DH',
+ 'DOWNLOAD_DELAY': 0.8,
+ 'DOWNLOAD_TIMEOUT': 300,
+ 'LOG_FILE': 'log/scrapy_2023_2_2.log',
+ 'NEWSPIDER_MODULE': 'amazon_spider.spiders',
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['amazon_spider.spiders']}
+2023-02-02 09:59:32 [scrapy.extensions.telnet] INFO: Telnet Password: 734c418784b98b64
+2023-02-02 09:59:32 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2023-02-02 09:59:32 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'amazon_spider.middlewares.AmazonSpiderDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'amazon_spider.middlewares.fail_retry_middleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-02-02 09:59:32 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-02-02 09:59:32 [scrapy.middleware] INFO: Enabled item pipelines:
+['amazon_spider.pipelines.MysqlasynPipeline']
+2023-02-02 09:59:32 [scrapy.core.engine] INFO: Spider opened
+2023-02-02 09:59:32 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-02-02 09:59:32 [amazon_crawl] INFO: Spider opened: amazon_crawl
+2023-02-02 09:59:32 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-02-02 09:59:32 [amazon_crawl] DEBUG: ------------获取首批代理ip----------------
+2023-02-02 09:59:32 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): api.xdaili.cn:80
+2023-02-02 09:59:32 [urllib3.connectionpool] DEBUG: http://api.xdaili.cn:80 "GET /xdaili-api//greatRecharge/getGreatIp?spiderId=460e34f07cf041899a22e79353081288&orderno=YZ2021112078186AsWJy&returnType=1&count=5 HTTP/1.1" 200 108
+2023-02-02 09:59:32 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; QQBrowser/7.0.3698.400)
+2023-02-02 09:59:32 [amazon_crawl] DEBUG: 更换IP:http://106.111.233.108:33840-----0
+2023-02-02 09:59:32 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:6.0) Gecko/20100101 Firefox/6.0
+2023-02-02 09:59:32 [amazon_crawl] DEBUG: 更换IP:http://61.145.27.89:41415-----1
+2023-02-02 09:59:32 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows; U; Windows NT 6.1; ) AppleWebKit/534.12 (KHTML, like Gecko) Maxthon/3.0 Safari/534.12
+2023-02-02 09:59:32 [amazon_crawl] DEBUG: 更换IP:http://61.145.27.89:41415-----2
+2023-02-02 09:59:32 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1
+2023-02-02 09:59:32 [amazon_crawl] DEBUG: 更换IP:http://117.88.130.164:25888-----3
+2023-02-02 09:59:32 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; Acoo Browser; SLCC1; .NET CLR 2.0.50727; Media Center PC 5.0; .NET CLR 3.0.04506)
+2023-02-02 09:59:32 [amazon_crawl] DEBUG: 更换IP:http://117.88.130.164:25888-----4
+2023-02-02 09:59:32 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.11 TaoBrowser/2.0 Safari/536.11
+2023-02-02 09:59:32 [amazon_crawl] DEBUG: 更换IP:http://61.145.27.89:41415-----5
+2023-02-02 09:59:32 [amazon_crawl] DEBUG: 首次爬取完成，开始数据验证重试
+2023-02-02 10:00:13 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: amazon_spider)
+2023-02-02 10:00:13 [scrapy.utils.log] INFO: Versions: lxml 4.9.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.6.8 (tags/v3.6.8:3c6b436a57, Dec 24 2018, 00:16:47) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 3.4.8, Platform Windows-10-10.0.19041-SP0
+2023-02-02 10:00:13 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-02-02 10:00:13 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'amazon_spider',
+ 'CONCURRENT_REQUESTS': 24,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOADER_CLIENT_TLS_CIPHERS': 'DEFAULT:!DH',
+ 'DOWNLOAD_DELAY': 0.8,
+ 'DOWNLOAD_TIMEOUT': 300,
+ 'LOG_FILE': 'log/scrapy_2023_2_2.log',
+ 'NEWSPIDER_MODULE': 'amazon_spider.spiders',
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['amazon_spider.spiders']}
+2023-02-02 10:00:13 [scrapy.extensions.telnet] INFO: Telnet Password: aeb315a320f5353b
+2023-02-02 10:00:13 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2023-02-02 10:00:14 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'amazon_spider.middlewares.AmazonSpiderDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'amazon_spider.middlewares.fail_retry_middleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-02-02 10:00:14 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-02-02 10:00:14 [scrapy.middleware] INFO: Enabled item pipelines:
+['amazon_spider.pipelines.MysqlasynPipeline']
+2023-02-02 10:00:14 [scrapy.core.engine] INFO: Spider opened
+2023-02-02 10:00:14 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-02-02 10:00:14 [amazon_crawl] INFO: Spider opened: amazon_crawl
+2023-02-02 10:00:14 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-02-02 10:00:14 [amazon_crawl] DEBUG: ------------获取首批代理ip----------------
+2023-02-02 10:00:14 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): api.xdaili.cn:80
+2023-02-02 10:00:14 [urllib3.connectionpool] DEBUG: http://api.xdaili.cn:80 "GET /xdaili-api//greatRecharge/getGreatIp?spiderId=460e34f07cf041899a22e79353081288&orderno=YZ2021112078186AsWJy&returnType=1&count=5 HTTP/1.1" 200 109
+2023-02-02 10:00:14 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 5.1; U; en; rv:1.8.1) Gecko/20061208 Firefox/2.0.0 Opera 9.50
+2023-02-02 10:00:14 [amazon_crawl] DEBUG: 更换IP:http://61.145.24.226:39839-----0
+2023-02-02 10:00:14 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; LBBROWSER)
+2023-02-02 10:00:14 [amazon_crawl] DEBUG: 更换IP:http://114.231.41.251:22239-----1
+2023-02-02 10:00:14 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:2.0b13pre) Gecko/20110307 Firefox/4.0b13pre
+2023-02-02 10:00:14 [amazon_crawl] DEBUG: 更换IP:http://121.207.93.195:20161-----2
+2023-02-02 10:00:14 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1
+2023-02-02 10:00:14 [amazon_crawl] DEBUG: 更换IP:http://121.207.93.195:20161-----3
+2023-02-02 10:00:14 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (Kresponse, like Gecko) Chrome/91.0.4472.114 Safari/537.36
+2023-02-02 10:00:14 [amazon_crawl] DEBUG: 更换IP:http://113.103.141.135:43150-----4
+2023-02-02 10:00:14 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:6.0) Gecko/20100101 Firefox/6.0
+2023-02-02 10:00:14 [amazon_crawl] DEBUG: 更换IP:http://113.103.141.135:43150-----5
+2023-02-02 10:00:14 [amazon_crawl] DEBUG: 首次爬取完成，开始数据验证重试
+2023-02-02 10:01:10 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: amazon_spider)
+2023-02-02 10:01:10 [scrapy.utils.log] INFO: Versions: lxml 4.9.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.6.8 (tags/v3.6.8:3c6b436a57, Dec 24 2018, 00:16:47) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 3.4.8, Platform Windows-10-10.0.19041-SP0
+2023-02-02 10:01:10 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-02-02 10:01:10 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'amazon_spider',
+ 'CONCURRENT_REQUESTS': 24,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOADER_CLIENT_TLS_CIPHERS': 'DEFAULT:!DH',
+ 'DOWNLOAD_DELAY': 0.8,
+ 'DOWNLOAD_TIMEOUT': 300,
+ 'LOG_FILE': 'log/scrapy_2023_2_2.log',
+ 'NEWSPIDER_MODULE': 'amazon_spider.spiders',
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['amazon_spider.spiders']}
+2023-02-02 10:01:10 [scrapy.extensions.telnet] INFO: Telnet Password: da5292f9d301db7f
+2023-02-02 10:01:10 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2023-02-02 10:01:10 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'amazon_spider.middlewares.AmazonSpiderDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'amazon_spider.middlewares.fail_retry_middleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-02-02 10:01:10 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-02-02 10:01:10 [scrapy.middleware] INFO: Enabled item pipelines:
+['amazon_spider.pipelines.MysqlasynPipeline']
+2023-02-02 10:01:10 [scrapy.core.engine] INFO: Spider opened
+2023-02-02 10:01:10 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-02-02 10:01:10 [amazon_crawl] INFO: Spider opened: amazon_crawl
+2023-02-02 10:01:10 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-02-02 10:01:10 [amazon_crawl] DEBUG: ------------获取首批代理ip----------------
+2023-02-02 10:01:10 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): api.xdaili.cn:80
+2023-02-02 10:01:10 [urllib3.connectionpool] DEBUG: http://api.xdaili.cn:80 "GET /xdaili-api//greatRecharge/getGreatIp?spiderId=460e34f07cf041899a22e79353081288&orderno=YZ2021112078186AsWJy&returnType=1&count=5 HTTP/1.1" 200 105
+2023-02-02 10:01:10 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\engine.py", line 129, in _next_request
+    request = next(slot.start_requests)
+  File "D:\pythonProject\amazon_spider\amazon_spider\spiders\amazon.py", line 69, in start_requests
+    print('一共' + len(self.sql_result) + '个目标ASIN')
+TypeError: must be str, not int
+2023-02-02 10:01:10 [scrapy.core.engine] INFO: Closing spider (finished)
+2023-02-02 10:01:10 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'elapsed_time_seconds': 0.110295,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 2, 2, 2, 1, 10, 524683),
+ 'log_count/DEBUG': 3,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 11,
+ 'start_time': datetime.datetime(2023, 2, 2, 2, 1, 10, 414388)}
+2023-02-02 10:01:10 [scrapy.core.engine] INFO: Spider closed (finished)
+2023-02-02 10:01:30 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: amazon_spider)
+2023-02-02 10:01:30 [scrapy.utils.log] INFO: Versions: lxml 4.9.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.6.8 (tags/v3.6.8:3c6b436a57, Dec 24 2018, 00:16:47) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 3.4.8, Platform Windows-10-10.0.19041-SP0
+2023-02-02 10:01:30 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-02-02 10:01:30 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'amazon_spider',
+ 'CONCURRENT_REQUESTS': 24,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOADER_CLIENT_TLS_CIPHERS': 'DEFAULT:!DH',
+ 'DOWNLOAD_DELAY': 0.8,
+ 'DOWNLOAD_TIMEOUT': 300,
+ 'LOG_FILE': 'log/scrapy_2023_2_2.log',
+ 'NEWSPIDER_MODULE': 'amazon_spider.spiders',
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['amazon_spider.spiders']}
+2023-02-02 10:01:30 [scrapy.extensions.telnet] INFO: Telnet Password: db75c7dc3a79a248
+2023-02-02 10:01:30 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2023-02-02 10:01:30 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'amazon_spider.middlewares.AmazonSpiderDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'amazon_spider.middlewares.fail_retry_middleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-02-02 10:01:30 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-02-02 10:01:30 [scrapy.middleware] INFO: Enabled item pipelines:
+['amazon_spider.pipelines.MysqlasynPipeline']
+2023-02-02 10:01:30 [scrapy.core.engine] INFO: Spider opened
+2023-02-02 10:01:30 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-02-02 10:01:30 [amazon_crawl] INFO: Spider opened: amazon_crawl
+2023-02-02 10:01:30 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-02-02 10:01:30 [amazon_crawl] DEBUG: ------------获取首批代理ip----------------
+2023-02-02 10:01:30 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): api.xdaili.cn:80
+2023-02-02 10:01:30 [urllib3.connectionpool] DEBUG: http://api.xdaili.cn:80 "GET /xdaili-api//greatRecharge/getGreatIp?spiderId=460e34f07cf041899a22e79353081288&orderno=YZ2021112078186AsWJy&returnType=1&count=5 HTTP/1.1" 200 110
+2023-02-02 10:01:30 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 5.1; U; en; rv:1.8.1) Gecko/20061208 Firefox/2.0.0 Opera 9.50
+2023-02-02 10:01:30 [amazon_crawl] DEBUG: 更换IP:http://117.95.167.188:29163-----0
+2023-02-02 10:01:30 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36
+2023-02-02 10:01:30 [amazon_crawl] DEBUG: 更换IP:http://117.84.113.157:35545-----1
+2023-02-02 10:01:30 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.2pre) Gecko/20070215 K-Ninja/2.1.1
+2023-02-02 10:01:30 [amazon_crawl] DEBUG: 更换IP:http://117.95.167.188:29163-----2
+2023-02-02 10:01:30 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11
+2023-02-02 10:01:30 [amazon_crawl] DEBUG: 更换IP:http://117.84.113.157:35545-----3
+2023-02-02 10:01:30 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)
+2023-02-02 10:01:30 [amazon_crawl] DEBUG: 更换IP:http://117.84.113.157:35545-----4
+2023-02-02 10:01:30 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.56 Safari/535.11
+2023-02-02 10:01:30 [amazon_crawl] DEBUG: 更换IP:http://117.84.113.157:35545-----5
+2023-02-02 10:01:30 [amazon_crawl] DEBUG: 首次爬取完成，开始数据验证重试
+2023-02-02 10:02:11 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: amazon_spider)
+2023-02-02 10:02:11 [scrapy.utils.log] INFO: Versions: lxml 4.9.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.6.8 (tags/v3.6.8:3c6b436a57, Dec 24 2018, 00:16:47) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 3.4.8, Platform Windows-10-10.0.19041-SP0
+2023-02-02 10:02:11 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-02-02 10:02:11 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'amazon_spider',
+ 'CONCURRENT_REQUESTS': 24,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOADER_CLIENT_TLS_CIPHERS': 'DEFAULT:!DH',
+ 'DOWNLOAD_DELAY': 0.8,
+ 'DOWNLOAD_TIMEOUT': 300,
+ 'LOG_FILE': 'log/scrapy_2023_2_2.log',
+ 'NEWSPIDER_MODULE': 'amazon_spider.spiders',
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['amazon_spider.spiders']}
+2023-02-02 10:02:11 [scrapy.extensions.telnet] INFO: Telnet Password: 586b8a83942cf4f5
+2023-02-02 10:02:11 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2023-02-02 10:02:11 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'amazon_spider.middlewares.AmazonSpiderDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'amazon_spider.middlewares.fail_retry_middleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-02-02 10:02:11 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-02-02 10:02:11 [scrapy.middleware] INFO: Enabled item pipelines:
+['amazon_spider.pipelines.MysqlasynPipeline']
+2023-02-02 10:02:11 [scrapy.core.engine] INFO: Spider opened
+2023-02-02 10:02:12 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-02-02 10:02:12 [amazon_crawl] INFO: Spider opened: amazon_crawl
+2023-02-02 10:02:12 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-02-02 10:02:12 [amazon_crawl] DEBUG: ------------获取首批代理ip----------------
+2023-02-02 10:02:12 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): api.xdaili.cn:80
+2023-02-02 10:02:12 [urllib3.connectionpool] DEBUG: http://api.xdaili.cn:80 "GET /xdaili-api//greatRecharge/getGreatIp?spiderId=460e34f07cf041899a22e79353081288&orderno=YZ2021112078186AsWJy&returnType=1&count=5 HTTP/1.1" 200 109
+2023-02-02 10:02:12 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/4.0 (compatible; MSIE 7.0; AOL 9.5; AOLBuild 4337.35; Windows NT 5.1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+2023-02-02 10:02:12 [amazon_crawl] DEBUG: 更换IP:http://140.250.144.221:31659-----0
+2023-02-02 10:02:12 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.163 Safari/535.1
+2023-02-02 10:02:12 [amazon_crawl] DEBUG: 更换IP:http://183.143.78.229:40792-----1
+2023-02-02 10:02:12 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/4.0 (compatible; MSIE 7.0; AOL 9.5; AOLBuild 4337.35; Windows NT 5.1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+2023-02-02 10:02:12 [amazon_crawl] DEBUG: 更换IP:http://183.143.78.229:40792-----2
+2023-02-02 10:02:12 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36 OPR/26.0.1656.60
+2023-02-02 10:02:12 [amazon_crawl] DEBUG: 更换IP:http://117.95.182.112:25555-----3
+2023-02-02 10:02:12 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.2pre) Gecko/20070215 K-Ninja/2.1.1
+2023-02-02 10:02:12 [amazon_crawl] DEBUG: 更换IP:http://117.95.182.112:25555-----4
+2023-02-02 10:02:12 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:16.0) Gecko/20100101 Firefox/16.0
+2023-02-02 10:02:12 [amazon_crawl] DEBUG: 更换IP:http://117.95.182.112:25555-----5
+2023-02-02 10:02:12 [amazon_crawl] DEBUG: 首次爬取完成，开始数据验证重试
+2023-02-02 10:02:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.ca/dp/B07PXGQC1Q/?language=en_US> (referer: None)
+2023-02-02 10:02:19 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.amazon.ca/dp/B07PXGQC1Q/?language=en_US> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "D:\pythonProject\amazon_spider\amazon_spider\spiders\amazon.py", line 1318, in parse_ca
+    item['brand'] = re.findall(r'Besuche den (.*)-Store', ''.join(brand_info))[0]
+IndexError: list index out of range
+2023-02-02 10:02:49 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.amazon.ca/dp/B09NMT7NXY/?language=en_US> (failed 1 times): Could not open CONNECT tunnel with proxy 117.95.182.112:25555 [{'status': 503, 'reason': b'Service Unavailable'}]
+2023-02-02 10:02:49 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.56 Safari/535.11 
+2023-02-02 10:02:49 [amazon_crawl] DEBUG: 更换IP:http://117.95.182.112:25555-----6
+2023-02-02 10:02:50 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.amazon.ca/dp/B0BR35FC3K/?language=en_US> (failed 1 times): Could not open CONNECT tunnel with proxy 117.95.182.112:25555 [{'status': 503, 'reason': b'Service Unavailable'}]
+2023-02-02 10:02:50 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; QQDownload 732; .NET4.0C; .NET4.0E; LBBROWSER)
+2023-02-02 10:02:50 [amazon_crawl] DEBUG: 更换IP:http://117.95.182.112:25555-----7
+2023-02-02 10:02:50 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.amazon.ca/dp/B09XQZ3TQ2/?language=en_US> (failed 1 times): Could not open CONNECT tunnel with proxy 117.95.182.112:25555 [{'status': 503, 'reason': b'Service Unavailable'}]
+2023-02-02 10:02:50 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (Kresponse, like Gecko) Chrome/91.0.4472.114 Safari/537.36
+2023-02-02 10:02:50 [amazon_crawl] DEBUG: 更换IP:http://183.143.78.229:40792-----8
+2023-02-02 10:02:50 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <GET https://www.amazon.ca/dp/B09NMT7NXY/?language=en_US> (failed 2 times): Could not open CONNECT tunnel with proxy 117.95.182.112:25555 [{'status': 503, 'reason': b'Service Unavailable'}]
+2023-02-02 10:02:50 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <GET https://www.amazon.ca/dp/B09NMT7NXY/?language=en_US> (failed 2 times): Could not open CONNECT tunnel with proxy 117.95.182.112:25555 [{'status': 503, 'reason': b'Service Unavailable'}]
+2023-02-02 10:02:50 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.amazon.ca/dp/B09NMT7NXY/?language=en_US>
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\contextvars\__init__.py", line 38, in run
+    return callable(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\downloader\middleware.py", line 44, in process_request
+    return (yield download_func(request=request, spider=spider))
+scrapy.core.downloader.handlers.http11.TunnelError: Could not open CONNECT tunnel with proxy 117.95.182.112:25555 [{'status': 503, 'reason': b'Service Unavailable'}]
+2023-02-02 10:02:50 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <GET https://www.amazon.ca/dp/B0BR35FC3K/?language=en_US> (failed 2 times): Could not open CONNECT tunnel with proxy 117.95.182.112:25555 [{'status': 503, 'reason': b'Service Unavailable'}]
+2023-02-02 10:02:50 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <GET https://www.amazon.ca/dp/B0BR35FC3K/?language=en_US> (failed 2 times): Could not open CONNECT tunnel with proxy 117.95.182.112:25555 [{'status': 503, 'reason': b'Service Unavailable'}]
+2023-02-02 10:02:50 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.amazon.ca/dp/B0BR35FC3K/?language=en_US>
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\contextvars\__init__.py", line 38, in run
+    return callable(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\downloader\middleware.py", line 44, in process_request
+    return (yield download_func(request=request, spider=spider))
+scrapy.core.downloader.handlers.http11.TunnelError: Could not open CONNECT tunnel with proxy 117.95.182.112:25555 [{'status': 503, 'reason': b'Service Unavailable'}]
+2023-02-02 10:03:12 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 0 items (at 0 items/min)
+2023-02-02 10:03:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.ca/dp/B09G31HM68/?language=en_US> (referer: None)
+2023-02-02 10:03:15 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.amazon.ca/dp/B09G31HM68/?language=en_US> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "D:\pythonProject\amazon_spider\amazon_spider\spiders\amazon.py", line 1318, in parse_ca
+    item['brand'] = re.findall(r'Besuche den (.*)-Store', ''.join(brand_info))[0]
+IndexError: list index out of range
+2023-02-02 10:03:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.ca/dp/B09XQZ3TQ2/?language=en_US> (referer: None)
+2023-02-02 10:03:18 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.amazon.ca/dp/B09XQZ3TQ2/?language=en_US> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "D:\pythonProject\amazon_spider\amazon_spider\spiders\amazon.py", line 1318, in parse_ca
+    item['brand'] = re.findall(r'Besuche den (.*)-Store', ''.join(brand_info))[0]
+IndexError: list index out of range
+2023-02-02 10:05:48 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: amazon_spider)
+2023-02-02 10:05:48 [scrapy.utils.log] INFO: Versions: lxml 4.9.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.6.8 (tags/v3.6.8:3c6b436a57, Dec 24 2018, 00:16:47) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 3.4.8, Platform Windows-10-10.0.19041-SP0
+2023-02-02 10:05:48 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-02-02 10:05:48 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'amazon_spider',
+ 'CONCURRENT_REQUESTS': 24,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOADER_CLIENT_TLS_CIPHERS': 'DEFAULT:!DH',
+ 'DOWNLOAD_DELAY': 0.8,
+ 'DOWNLOAD_TIMEOUT': 300,
+ 'LOG_FILE': 'log/scrapy_2023_2_2.log',
+ 'NEWSPIDER_MODULE': 'amazon_spider.spiders',
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['amazon_spider.spiders']}
+2023-02-02 10:05:48 [scrapy.extensions.telnet] INFO: Telnet Password: dee9ab69d7a8b761
+2023-02-02 10:05:48 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2023-02-02 10:05:48 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'amazon_spider.middlewares.AmazonSpiderDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'amazon_spider.middlewares.fail_retry_middleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-02-02 10:05:48 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-02-02 10:05:48 [scrapy.middleware] INFO: Enabled item pipelines:
+['amazon_spider.pipelines.MysqlasynPipeline']
+2023-02-02 10:05:48 [scrapy.core.engine] INFO: Spider opened
+2023-02-02 10:05:48 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-02-02 10:05:48 [amazon_crawl] INFO: Spider opened: amazon_crawl
+2023-02-02 10:05:48 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-02-02 10:05:48 [amazon_crawl] DEBUG: ------------获取首批代理ip----------------
+2023-02-02 10:05:48 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): api.xdaili.cn:80
+2023-02-02 10:05:48 [urllib3.connectionpool] DEBUG: http://api.xdaili.cn:80 "GET /xdaili-api//greatRecharge/getGreatIp?spiderId=460e34f07cf041899a22e79353081288&orderno=YZ2021112078186AsWJy&returnType=1&count=5 HTTP/1.1" 200 107
+2023-02-02 10:05:48 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (X11; Linux i686; U;) Gecko/20070322 Kazehakase/0.4.5
+2023-02-02 10:05:48 [amazon_crawl] DEBUG: 更换IP:http://115.207.17.66:47291-----0
+2023-02-02 10:05:48 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; QQBrowser/7.0.3698.400)
+2023-02-02 10:05:48 [amazon_crawl] DEBUG: 更换IP:http://115.207.17.66:47291-----1
+2023-02-02 10:05:48 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.71 Safari/537.1 LBBROWSER
+2023-02-02 10:05:48 [amazon_crawl] DEBUG: 更换IP:http://121.207.93.195:20161-----2
+2023-02-02 10:05:48 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.163 Safari/535.1
+2023-02-02 10:05:48 [amazon_crawl] DEBUG: 更换IP:http://119.41.207.27:24983-----3
+2023-02-02 10:05:48 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.71 Safari/537.1 LBBROWSER
+2023-02-02 10:05:48 [amazon_crawl] DEBUG: 更换IP:http://121.207.93.195:20161-----4
+2023-02-02 10:05:48 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11
+2023-02-02 10:05:48 [amazon_crawl] DEBUG: 更换IP:http://115.207.17.66:47291-----5
+2023-02-02 10:05:48 [amazon_crawl] DEBUG: 首次爬取完成，开始数据验证重试
+2023-02-02 10:11:22 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: amazon_spider)
+2023-02-02 10:11:22 [scrapy.utils.log] INFO: Versions: lxml 4.9.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.6.8 (tags/v3.6.8:3c6b436a57, Dec 24 2018, 00:16:47) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 3.4.8, Platform Windows-10-10.0.19041-SP0
+2023-02-02 10:11:22 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-02-02 10:11:22 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'amazon_spider',
+ 'CONCURRENT_REQUESTS': 24,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOADER_CLIENT_TLS_CIPHERS': 'DEFAULT:!DH',
+ 'DOWNLOAD_DELAY': 0.8,
+ 'DOWNLOAD_TIMEOUT': 300,
+ 'LOG_FILE': 'log/scrapy_2023_2_2.log',
+ 'NEWSPIDER_MODULE': 'amazon_spider.spiders',
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['amazon_spider.spiders']}
+2023-02-02 10:11:22 [scrapy.extensions.telnet] INFO: Telnet Password: 87c81dcc9280315f
+2023-02-02 10:11:22 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2023-02-02 10:11:22 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'amazon_spider.middlewares.AmazonSpiderDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'amazon_spider.middlewares.fail_retry_middleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-02-02 10:11:22 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-02-02 10:11:22 [scrapy.middleware] INFO: Enabled item pipelines:
+['amazon_spider.pipelines.MysqlasynPipeline']
+2023-02-02 10:11:22 [scrapy.core.engine] INFO: Spider opened
+2023-02-02 10:11:22 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-02-02 10:11:22 [amazon_crawl] INFO: Spider opened: amazon_crawl
+2023-02-02 10:11:22 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-02-02 10:11:22 [amazon_crawl] DEBUG: ------------获取首批代理ip----------------
+2023-02-02 10:11:22 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): api.xdaili.cn:80
+2023-02-02 10:11:22 [urllib3.connectionpool] DEBUG: http://api.xdaili.cn:80 "GET /xdaili-api//greatRecharge/getGreatIp?spiderId=460e34f07cf041899a22e79353081288&orderno=YZ2021112078186AsWJy&returnType=1&count=5 HTTP/1.1" 200 108
+2023-02-02 10:11:22 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\engine.py", line 129, in _next_request
+    request = next(slot.start_requests)
+  File "D:\pythonProject\amazon_spider\amazon_spider\spiders\amazon.py", line 94, in start_requests
+    yield Request(url, meta={'asin': str(row[0]), 'station': 'CA', 'url': url}, callback=self.parse_ca)
+AttributeError: 'amazon_spider' object has no attribute 'parse_ca'
+2023-02-02 10:11:22 [scrapy.core.engine] INFO: Closing spider (finished)
+2023-02-02 10:11:22 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'elapsed_time_seconds': 0.108404,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 2, 2, 2, 11, 22, 728367),
+ 'log_count/DEBUG': 3,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 11,
+ 'start_time': datetime.datetime(2023, 2, 2, 2, 11, 22, 619963)}
+2023-02-02 10:11:22 [scrapy.core.engine] INFO: Spider closed (finished)
+2023-02-02 10:11:46 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: amazon_spider)
+2023-02-02 10:11:46 [scrapy.utils.log] INFO: Versions: lxml 4.9.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.6.8 (tags/v3.6.8:3c6b436a57, Dec 24 2018, 00:16:47) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 3.4.8, Platform Windows-10-10.0.19041-SP0
+2023-02-02 10:11:46 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-02-02 10:11:46 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'amazon_spider',
+ 'CONCURRENT_REQUESTS': 24,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOADER_CLIENT_TLS_CIPHERS': 'DEFAULT:!DH',
+ 'DOWNLOAD_DELAY': 0.8,
+ 'DOWNLOAD_TIMEOUT': 300,
+ 'LOG_FILE': 'log/scrapy_2023_2_2.log',
+ 'NEWSPIDER_MODULE': 'amazon_spider.spiders',
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['amazon_spider.spiders']}
+2023-02-02 10:11:46 [scrapy.extensions.telnet] INFO: Telnet Password: 5e849e0e66d298ac
+2023-02-02 10:11:46 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2023-02-02 10:11:46 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'amazon_spider.middlewares.AmazonSpiderDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'amazon_spider.middlewares.fail_retry_middleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-02-02 10:11:46 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-02-02 10:11:46 [scrapy.middleware] INFO: Enabled item pipelines:
+['amazon_spider.pipelines.MysqlasynPipeline']
+2023-02-02 10:11:46 [scrapy.core.engine] INFO: Spider opened
+2023-02-02 10:11:46 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-02-02 10:11:46 [amazon_crawl] INFO: Spider opened: amazon_crawl
+2023-02-02 10:11:46 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-02-02 10:11:46 [amazon_crawl] DEBUG: ------------获取首批代理ip----------------
+2023-02-02 10:11:46 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): api.xdaili.cn:80
+2023-02-02 10:11:46 [urllib3.connectionpool] DEBUG: http://api.xdaili.cn:80 "GET /xdaili-api//greatRecharge/getGreatIp?spiderId=460e34f07cf041899a22e79353081288&orderno=YZ2021112078186AsWJy&returnType=1&count=5 HTTP/1.1" 200 108
+2023-02-02 10:11:46 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; QQDownload 732; .NET4.0C; .NET4.0E; LBBROWSER)
+2023-02-02 10:11:46 [amazon_crawl] DEBUG: 更换IP:http://121.234.175.81:44429-----0
+2023-02-02 10:11:46 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)
+2023-02-02 10:11:46 [amazon_crawl] DEBUG: 更换IP:http://140.237.158.73:24338-----1
+2023-02-02 10:11:46 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 5.1; U; en; rv:1.8.1) Gecko/20061208 Firefox/2.0.0 Opera 9.50
+2023-02-02 10:11:46 [amazon_crawl] DEBUG: 更换IP:http://49.89.222.223:45627-----2
+2023-02-02 10:11:46 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:6.0) Gecko/20100101 Firefox/6.0
+2023-02-02 10:11:46 [amazon_crawl] DEBUG: 更换IP:http://27.150.41.155:20617-----3
+2023-02-02 10:11:46 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.122 UBrowser/4.0.3214.0 Safari/537.36
+2023-02-02 10:11:46 [amazon_crawl] DEBUG: 更换IP:http://27.150.41.155:20617-----4
+2023-02-02 10:11:46 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 6.0; Trident/4.0; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET CLR 1.0.3705; .NET CLR 1.1.4322)
+2023-02-02 10:11:46 [amazon_crawl] DEBUG: 更换IP:http://49.89.222.223:45627-----5
+2023-02-02 10:11:48 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.amazon.ca/dp/B07PXGQC1Q/?language=en_US> (failed 1 times): Connection was refused by other side: 10061: 由于目标计算机积极拒绝，无法连接。.
+2023-02-02 10:11:48 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/535.20 (KHTML, like Gecko) Chrome/19.0.1036.7 Safari/535.20
+2023-02-02 10:11:48 [amazon_crawl] DEBUG: 更换IP:http://121.234.175.81:44429-----6
+2023-02-02 10:11:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.ca/dp/B09G31HM68/?language=en_US> (referer: None)
+2023-02-02 10:11:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.ca/dp/B09G31HM68/?language=en_US>
+None
+2023-02-02 10:11:51 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.amazon.ca/dp/B09NMT7NXY/?language=en_US> (failed 1 times): Connection was refused by other side: 10061: 由于目标计算机积极拒绝，无法连接。.
+2023-02-02 10:11:51 [amazon_crawl] DEBUG: [User-Agent]: Opera/9.80 (Windows NT 6.1; U; zh-cn) Presto/2.9.168 Version/11.50
+2023-02-02 10:11:51 [amazon_crawl] DEBUG: 更换IP:http://27.150.41.155:20617-----7
+2023-02-02 10:11:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.ca/dp/B09LCGLYMD/?language=en_US> (referer: None)
+2023-02-02 10:11:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.ca/dp/B09LCGLYMD/?language=en_US>
+None
+2023-02-02 10:11:52 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.amazon.ca/dp/B09XQZ3TQ2/?language=en_US> (failed 1 times): Connection was refused by other side: 10061: 由于目标计算机积极拒绝，无法连接。.
+2023-02-02 10:11:52 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11
+2023-02-02 10:11:52 [amazon_crawl] DEBUG: 更换IP:http://14.118.209.165:25481-----8
+2023-02-02 10:11:54 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <GET https://www.amazon.ca/dp/B07PXGQC1Q/?language=en_US> (failed 2 times): Connection was refused by other side: 10061: 由于目标计算机积极拒绝，无法连接。.
+2023-02-02 10:11:54 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <GET https://www.amazon.ca/dp/B07PXGQC1Q/?language=en_US> (failed 2 times): Connection was refused by other side: 10061: 由于目标计算机积极拒绝，无法连接。.
+2023-02-02 10:11:54 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.amazon.ca/dp/B07PXGQC1Q/?language=en_US>
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\contextvars\__init__.py", line 38, in run
+    return callable(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\downloader\middleware.py", line 44, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 10061: 由于目标计算机积极拒绝，无法连接。.
+2023-02-02 10:11:55 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <GET https://www.amazon.ca/dp/B09NMT7NXY/?language=en_US> (failed 2 times): Connection was refused by other side: 10061: 由于目标计算机积极拒绝，无法连接。.
+2023-02-02 10:11:55 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <GET https://www.amazon.ca/dp/B09NMT7NXY/?language=en_US> (failed 2 times): Connection was refused by other side: 10061: 由于目标计算机积极拒绝，无法连接。.
+2023-02-02 10:11:56 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.amazon.ca/dp/B09NMT7NXY/?language=en_US>
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\contextvars\__init__.py", line 38, in run
+    return callable(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\downloader\middleware.py", line 44, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 10061: 由于目标计算机积极拒绝，无法连接。.
+2023-02-02 10:11:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.ca/dp/B0BR35FC3K/?language=en_US> (referer: None)
+2023-02-02 10:11:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.ca/dp/B0BR35FC3K/?language=en_US>
+None
+2023-02-02 10:11:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.ca/dp/B09XQZ3TQ2/?language=en_US> (referer: None)
+2023-02-02 10:11:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.ca/dp/B09XQZ3TQ2/?language=en_US>
+None
+2023-02-02 10:11:58 [scrapy.core.engine] INFO: Closing spider (finished)
+2023-02-02 10:11:58 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 5,
+ 'downloader/exception_type_count/twisted.internet.error.ConnectionRefusedError': 5,
+ 'downloader/request_bytes': 3207,
+ 'downloader/request_count': 9,
+ 'downloader/request_method_count/GET': 9,
+ 'downloader/response_bytes': 1432609,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'elapsed_time_seconds': 11.937369,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 2, 2, 2, 11, 58, 333905),
+ 'httpcompression/response_bytes': 8083756,
+ 'httpcompression/response_count': 4,
+ 'item_scraped_count': 4,
+ 'log_count/DEBUG': 32,
+ 'log_count/ERROR': 6,
+ 'log_count/INFO': 11,
+ 'response_received_count': 4,
+ 'retry/count': 3,
+ 'retry/max_reached': 4,
+ 'retry/reason_count/twisted.internet.error.ConnectionRefusedError': 3,
+ 'scheduler/dequeued': 9,
+ 'scheduler/dequeued/memory': 9,
+ 'scheduler/enqueued': 9,
+ 'scheduler/enqueued/memory': 9,
+ 'start_time': datetime.datetime(2023, 2, 2, 2, 11, 46, 396536)}
+2023-02-02 10:11:58 [scrapy.core.engine] INFO: Spider closed (finished)
+2023-02-02 10:18:12 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: amazon_spider)
+2023-02-02 10:18:12 [scrapy.utils.log] INFO: Versions: lxml 4.9.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.6.8 (tags/v3.6.8:3c6b436a57, Dec 24 2018, 00:16:47) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 3.4.8, Platform Windows-10-10.0.19041-SP0
+2023-02-02 10:18:12 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-02-02 10:18:12 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'amazon_spider',
+ 'CONCURRENT_REQUESTS': 24,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOADER_CLIENT_TLS_CIPHERS': 'DEFAULT:!DH',
+ 'DOWNLOAD_DELAY': 0.8,
+ 'DOWNLOAD_TIMEOUT': 300,
+ 'LOG_FILE': 'log/scrapy_2023_2_2.log',
+ 'NEWSPIDER_MODULE': 'amazon_spider.spiders',
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['amazon_spider.spiders']}
+2023-02-02 10:18:12 [scrapy.extensions.telnet] INFO: Telnet Password: 9feae674b4c6b7ed
+2023-02-02 10:18:12 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2023-02-02 10:18:13 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'amazon_spider.middlewares.AmazonSpiderDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'amazon_spider.middlewares.fail_retry_middleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-02-02 10:18:13 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-02-02 10:18:13 [scrapy.middleware] INFO: Enabled item pipelines:
+['amazon_spider.pipelines.MysqlasynPipeline']
+2023-02-02 10:18:13 [scrapy.core.engine] INFO: Spider opened
+2023-02-02 10:18:13 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-02-02 10:18:13 [amazon_crawl] INFO: Spider opened: amazon_crawl
+2023-02-02 10:18:13 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-02-02 10:18:13 [amazon_crawl] DEBUG: ------------获取首批代理ip----------------
+2023-02-02 10:18:13 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): api.xdaili.cn:80
+2023-02-02 10:18:13 [urllib3.connectionpool] DEBUG: http://api.xdaili.cn:80 "GET /xdaili-api//greatRecharge/getGreatIp?spiderId=460e34f07cf041899a22e79353081288&orderno=YZ2021112078186AsWJy&returnType=1&count=5 HTTP/1.1" 200 112
+2023-02-02 10:18:13 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 5.1; U; en; rv:1.8.1) Gecko/20061208 Firefox/2.0.0 Opera 9.50
+2023-02-02 10:18:13 [amazon_crawl] DEBUG: 更换IP:http://180.125.71.200:40424-----0
+2023-02-02 10:18:13 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36 OPR/26.0.1656.60
+2023-02-02 10:18:13 [amazon_crawl] DEBUG: 更换IP:http://180.125.71.200:40424-----1
+2023-02-02 10:18:13 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+2023-02-02 10:18:13 [amazon_crawl] DEBUG: 更换IP:http://220.161.243.173:24956-----2
+2023-02-02 10:18:13 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; QQDownload 732; .NET4.0C; .NET4.0E; LBBROWSER)
+2023-02-02 10:18:13 [amazon_crawl] DEBUG: 更换IP:http://121.233.206.232:21783-----3
+2023-02-02 10:18:13 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; en) Opera 9.50
+2023-02-02 10:18:13 [amazon_crawl] DEBUG: 更换IP:http://140.250.149.242:44418-----4
+2023-02-02 10:18:13 [amazon_crawl] DEBUG: [User-Agent]: Opera/9.80 (Windows NT 6.1; U; zh-cn) Presto/2.9.168 Version/11.50
+2023-02-02 10:18:13 [amazon_crawl] DEBUG: 更换IP:http://117.57.33.161:30713-----5
+2023-02-02 10:18:15 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.amazon.ca/dp/B07PXGQC1Q/?language=en_US> (failed 1 times): Connection was refused by other side: 10061: 由于目标计算机积极拒绝，无法连接。.
+2023-02-02 10:18:15 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; QQBrowser/7.0.3698.400)
+2023-02-02 10:18:15 [amazon_crawl] DEBUG: 更换IP:http://180.125.71.200:40424-----6
+2023-02-02 10:18:16 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.amazon.ca/dp/B09G31HM68/?language=en_US> (failed 1 times): Connection was refused by other side: 10061: 由于目标计算机积极拒绝，无法连接。.
+2023-02-02 10:18:16 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+2023-02-02 10:18:16 [amazon_crawl] DEBUG: 更换IP:http://117.57.33.161:30713-----7
+2023-02-02 10:18:18 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.amazon.ca/dp/B09NMT7NXY/?language=en_US> (failed 1 times): Connection was refused by other side: 10061: 由于目标计算机积极拒绝，无法连接。.
+2023-02-02 10:18:18 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/4.0 (compatible; MSIE 7.0b; Windows NT 5.2; .NET CLR 1.1.4322; .NET CLR 2.0.50727; InfoPath.2; .NET CLR 3.0.04506.30)
+2023-02-02 10:18:18 [amazon_crawl] DEBUG: 更换IP:http://117.57.33.161:30713-----8
+2023-02-02 10:18:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.ca/dp/B09LCGLYMD/?language=en_US> (referer: None)
+2023-02-02 10:18:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.ca/dp/B09LCGLYMD/?language=en_US>
+None
+2023-02-02 10:18:20 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET https://www.amazon.ca/dp/B0BR35FC3K/?language=en_US> (failed 1 times): Connection was refused by other side: 10061: 由于目标计算机积极拒绝，无法连接。.
+2023-02-02 10:18:20 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534.57.2 (KHTML, like Gecko) Version/5.1.7 Safari/534.57.2
+2023-02-02 10:18:20 [amazon_crawl] DEBUG: 更换IP:http://180.125.71.200:40424-----9
+2023-02-02 10:18:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.ca/dp/B09XQZ3TQ2/?language=en_US> (referer: None)
+2023-02-02 10:18:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.ca/dp/B09XQZ3TQ2/?language=en_US>
+None
+2023-02-02 10:18:21 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <GET https://www.amazon.ca/dp/B07PXGQC1Q/?language=en_US> (failed 2 times): Connection was refused by other side: 10061: 由于目标计算机积极拒绝，无法连接。.
+2023-02-02 10:18:21 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <GET https://www.amazon.ca/dp/B07PXGQC1Q/?language=en_US> (failed 2 times): Connection was refused by other side: 10061: 由于目标计算机积极拒绝，无法连接。.
+2023-02-02 10:18:21 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.amazon.ca/dp/B07PXGQC1Q/?language=en_US>
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\contextvars\__init__.py", line 38, in run
+    return callable(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\downloader\middleware.py", line 44, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 10061: 由于目标计算机积极拒绝，无法连接。.
+2023-02-02 10:18:22 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <GET https://www.amazon.ca/dp/B09G31HM68/?language=en_US> (failed 2 times): Connection was refused by other side: 10061: 由于目标计算机积极拒绝，无法连接。.
+2023-02-02 10:18:22 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <GET https://www.amazon.ca/dp/B09G31HM68/?language=en_US> (failed 2 times): Connection was refused by other side: 10061: 由于目标计算机积极拒绝，无法连接。.
+2023-02-02 10:18:22 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.amazon.ca/dp/B09G31HM68/?language=en_US>
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\contextvars\__init__.py", line 38, in run
+    return callable(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\downloader\middleware.py", line 44, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 10061: 由于目标计算机积极拒绝，无法连接。.
+2023-02-02 10:18:23 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <GET https://www.amazon.ca/dp/B09NMT7NXY/?language=en_US> (failed 2 times): Connection was refused by other side: 10061: 由于目标计算机积极拒绝，无法连接。.
+2023-02-02 10:18:23 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <GET https://www.amazon.ca/dp/B09NMT7NXY/?language=en_US> (failed 2 times): Connection was refused by other side: 10061: 由于目标计算机积极拒绝，无法连接。.
+2023-02-02 10:18:23 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.amazon.ca/dp/B09NMT7NXY/?language=en_US>
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\contextvars\__init__.py", line 38, in run
+    return callable(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\downloader\middleware.py", line 44, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 10061: 由于目标计算机积极拒绝，无法连接。.
+2023-02-02 10:18:24 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <GET https://www.amazon.ca/dp/B0BR35FC3K/?language=en_US> (failed 2 times): Connection was refused by other side: 10061: 由于目标计算机积极拒绝，无法连接。.
+2023-02-02 10:18:24 [scrapy.downloadermiddlewares.retry] ERROR: Gave up retrying <GET https://www.amazon.ca/dp/B0BR35FC3K/?language=en_US> (failed 2 times): Connection was refused by other side: 10061: 由于目标计算机积极拒绝，无法连接。.
+2023-02-02 10:18:24 [scrapy.core.scraper] ERROR: Error downloading <GET https://www.amazon.ca/dp/B0BR35FC3K/?language=en_US>
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\contextvars\__init__.py", line 38, in run
+    return callable(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\site-packages\scrapy\core\downloader\middleware.py", line 44, in process_request
+    return (yield download_func(request=request, spider=spider))
+twisted.internet.error.ConnectionRefusedError: Connection was refused by other side: 10061: 由于目标计算机积极拒绝，无法连接。.
+2023-02-02 10:18:25 [scrapy.core.engine] INFO: Closing spider (finished)
+2023-02-02 10:18:25 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 8,
+ 'downloader/exception_type_count/twisted.internet.error.ConnectionRefusedError': 8,
+ 'downloader/request_bytes': 3712,
+ 'downloader/request_count': 10,
+ 'downloader/request_method_count/GET': 10,
+ 'downloader/response_bytes': 741174,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'elapsed_time_seconds': 12.000226,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 2, 2, 2, 18, 25, 83788),
+ 'httpcompression/response_bytes': 4123340,
+ 'httpcompression/response_count': 2,
+ 'item_scraped_count': 2,
+ 'log_count/DEBUG': 31,
+ 'log_count/ERROR': 12,
+ 'log_count/INFO': 11,
+ 'response_received_count': 2,
+ 'retry/count': 4,
+ 'retry/max_reached': 8,
+ 'retry/reason_count/twisted.internet.error.ConnectionRefusedError': 4,
+ 'scheduler/dequeued': 10,
+ 'scheduler/dequeued/memory': 10,
+ 'scheduler/enqueued': 10,
+ 'scheduler/enqueued/memory': 10,
+ 'start_time': datetime.datetime(2023, 2, 2, 2, 18, 13, 83562)}
+2023-02-02 10:18:25 [scrapy.core.engine] INFO: Spider closed (finished)
+2023-02-02 10:31:02 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: amazon_spider)
+2023-02-02 10:31:02 [scrapy.utils.log] INFO: Versions: lxml 4.9.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.6.8 (tags/v3.6.8:3c6b436a57, Dec 24 2018, 00:16:47) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 3.4.8, Platform Windows-10-10.0.19041-SP0
+2023-02-02 10:31:02 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-02-02 10:31:02 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'amazon_spider',
+ 'CONCURRENT_REQUESTS': 24,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOADER_CLIENT_TLS_CIPHERS': 'DEFAULT:!DH',
+ 'DOWNLOAD_DELAY': 0.8,
+ 'DOWNLOAD_TIMEOUT': 300,
+ 'LOG_FILE': 'log/scrapy_2023_2_2.log',
+ 'NEWSPIDER_MODULE': 'amazon_spider.spiders',
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['amazon_spider.spiders']}
+2023-02-02 10:31:02 [scrapy.extensions.telnet] INFO: Telnet Password: f192039a799eb60e
+2023-02-02 10:31:02 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2023-02-02 10:31:03 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'amazon_spider.middlewares.AmazonSpiderDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'amazon_spider.middlewares.fail_retry_middleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-02-02 10:31:03 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-02-02 10:31:03 [scrapy.middleware] INFO: Enabled item pipelines:
+['amazon_spider.pipelines.MysqlasynPipeline']
+2023-02-02 10:31:03 [scrapy.core.engine] INFO: Spider opened
+2023-02-02 10:31:03 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-02-02 10:31:03 [amazon_crawl] INFO: Spider opened: amazon_crawl
+2023-02-02 10:31:03 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-02-02 10:31:03 [amazon_crawl] DEBUG: ------------获取首批代理ip----------------
+2023-02-02 10:31:03 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): api.xdaili.cn:80
+2023-02-02 10:31:03 [urllib3.connectionpool] DEBUG: http://api.xdaili.cn:80 "GET /xdaili-api//greatRecharge/getGreatIp?spiderId=460e34f07cf041899a22e79353081288&orderno=YZ2021112078186AsWJy&returnType=1&count=5 HTTP/1.1" 200 109
+2023-02-02 10:31:03 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11
+2023-02-02 10:31:03 [amazon_crawl] DEBUG: 更换IP:http://14.118.209.52:43149-----0
+2023-02-02 10:31:03 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (X11; U; Linux x86_64; zh-CN; rv:1.9.2.10) Gecko/20100922 Ubuntu/10.10 (maverick) Firefox/3.6.10
+2023-02-02 10:31:03 [amazon_crawl] DEBUG: 更换IP:http://59.59.150.241:48828-----1
+2023-02-02 10:31:03 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)
+2023-02-02 10:31:03 [amazon_crawl] DEBUG: 更换IP:http://115.226.168.54:41460-----2
+2023-02-02 10:31:03 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.71 Safari/537.1 LBBROWSER
+2023-02-02 10:31:03 [amazon_crawl] DEBUG: 更换IP:http://14.118.209.52:43149-----3
+2023-02-02 10:31:03 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; QQBrowser/7.0.3698.400)
+2023-02-02 10:31:03 [amazon_crawl] DEBUG: 更换IP:http://182.204.178.231:38878-----4
+2023-02-02 10:31:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.com.mx/dp/B08KRN16GG> (referer: None)
+2023-02-02 10:31:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.com.mx/dp/B08KRN16GG>
+None
+2023-02-02 10:31:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.com.mx/dp/B09T5S4QX8> (referer: None)
+2023-02-02 10:31:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.com.mx/dp/B09T5S4QX8>
+None
+2023-02-02 10:31:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.com.mx/dp/B09TG95TL2> (referer: None)
+2023-02-02 10:31:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.com.mx/dp/B09TG95TL2>
+None
+2023-02-02 10:31:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.com.mx/dp/B0B62NSWGG> (referer: None)
+2023-02-02 10:31:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.com.mx/dp/B0B62NSWGG>
+None
+2023-02-02 10:31:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.com.mx/dp/B0B6ZL5GKN> (referer: None)
+2023-02-02 10:31:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.com.mx/dp/B0B6ZL5GKN>
+None
+2023-02-02 10:31:12 [scrapy.core.engine] INFO: Closing spider (finished)
+2023-02-02 10:31:12 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1790,
+ 'downloader/request_count': 5,
+ 'downloader/request_method_count/GET': 5,
+ 'downloader/response_bytes': 1635297,
+ 'downloader/response_count': 5,
+ 'downloader/response_status_count/200': 5,
+ 'elapsed_time_seconds': 8.874993,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 2, 2, 2, 31, 12, 35141),
+ 'httpcompression/response_bytes': 9279161,
+ 'httpcompression/response_count': 5,
+ 'item_scraped_count': 5,
+ 'log_count/DEBUG': 23,
+ 'log_count/INFO': 11,
+ 'response_received_count': 5,
+ 'scheduler/dequeued': 5,
+ 'scheduler/dequeued/memory': 5,
+ 'scheduler/enqueued': 5,
+ 'scheduler/enqueued/memory': 5,
+ 'start_time': datetime.datetime(2023, 2, 2, 2, 31, 3, 160148)}
+2023-02-02 10:31:12 [scrapy.core.engine] INFO: Spider closed (finished)

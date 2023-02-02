@@ -1,3 +1,6 @@
+# -*- coding: UTF-8 -*-
+#!/usr/bin/python3
+
 import logging
 import random
 from scrapy import signals
@@ -111,6 +114,7 @@ class AmazonSpiderDownloaderMiddleware:
         settings = get_project_settings()
         user_agent = random.choice(settings['USER_AGENT_LIST'])
         request.headers['User-Agent'] = user_agent
+        print("[User-Agent]: {}".format(user_agent))
         spider.logger.debug("[User-Agent]: {}".format(user_agent))
         if '.com/' in request.url:
             request.headers['cookie'] = random.choice(cookie_us)

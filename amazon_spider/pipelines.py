@@ -1,3 +1,6 @@
+# -*- coding: UTF-8 -*-
+#!/usr/bin/python3
+
 # Define your item pipelines here
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
@@ -116,7 +119,7 @@ class MysqlasynPipeline(object):
                             item['spider_time'], item['station'], item['brand'], item['is_fba'],
                             item['description'], item['coupon'])
                        )
-        # print("数据已插入：" + str(item['asin']) + ": " + str(item['title']))
+        print("数据已插入：" + str(item['asin']) + ": " + str(item['title']))
     def handle_error(self, failure):
         if failure:
             # 打印错误信息
