@@ -11,7 +11,8 @@ from scrapy.utils.response import response_status_message
 # from ..usergents import USER_AGENT_LIST
 from scrapy.utils.project import get_project_settings
 from .settings import ipPool, count, proxy_url, \
-    cookie_de, cookie_us, cookie_fr, cookie_es, cookie_it, cookie_jp, cookie_uk
+    cookie_de, cookie_us, cookie_fr, cookie_es, cookie_it, cookie_jp, cookie_uk, \
+    cookie_ca, cookie_mx
 from twisted.internet.error import TimeoutError, TCPTimedOutError
 # useful for handling different item types with a single interface
 from itemadapter import is_item, ItemAdapter
@@ -130,6 +131,10 @@ class AmazonSpiderDownloaderMiddleware:
             request.headers['cookie'] = random.choice(cookie_uk)
         elif '.co.jp/' in request.url:
             request.headers['cookie'] = random.choice(cookie_jp)
+        elif '.ca/' in request.url:
+            request.headers['cookie'] = random.choice(cookie_ca)
+        elif '.mx/' in request.url:
+            request.headers['cookie'] = random.choice(cookie_mx)
 
         if '.co.jp/' not in request.url and 'reviews' not in request.url:
         #and request.meta.get('dont_filter', False):

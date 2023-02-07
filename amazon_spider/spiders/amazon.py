@@ -36,19 +36,27 @@ class amazon_spider(Spider):
            group by asin,country
         '''
         sql_check = '''
-            select a.asin,a.country from
-           (select asin,country from amazon_craw_asin_config
-           group by asin,country) a left join (
-            select t1.asin,t1.country,t1.title 
-            from amazon_craw_asin_details t1 
-            inner join(
-            select asin,country,max(spider_time) as spider_time from amazon_craw_asin_details 
-            where substring(spider_time,1,10) = date_format(current_date,'%Y-%m-%d')
-            group by asin,country
-            ) t2 on t1.asin = t2.asin and t1.country = t2.country and t1.spider_time = t2.spider_time
-            ) b on a.asin = b.asin and a.country = b.country
+            select 
+            a.asin,a.country 
+            from(
+                 select 
+                 asin,country 
+                 from amazon_craw_asin_config
+                 group by asin,country
+            ) a left join (
+                 select 
+                 t1.asin,t1.country
+                 from amazon_craw_asin_details t1 
+                 inner join(
+                     select 
+                     asin,country,max(spider_time) as spider_time 
+                     from amazon_craw_asin_details 
+                     where spider_time >= current_date
+                     group by asin,country
+                     ) t2 on t1.asin = t2.asin and t1.country = t2.country and t1.spider_time = t2.spider_time
+                 ) b on a.asin = b.asin and a.country = b.country
             where b.asin is null and b.country is null
-
+            -- group by a.asin,a.country
         '''
         sql_conn = '''
             select asin,country from amazon_craw_asin_config 
@@ -98,19 +106,20 @@ class amazon_spider(Spider):
         self.logger.debug('首次爬取完成，开始数据验证重试')
         # time.sleep(900)
         query_check = DoMysql()
-        count = query_check.row_count(sql_check)
         check_times = 1
-        while count > 0 and check_times <=2:
+        while check_times <= 2:
+            self.logger.debug('等待900秒后开始验证第 {} 次'.format(str(check_times)))
             time.sleep(900)
-            self.logger.debug('验证第 {} 次'.format(str(check_times)))
-
+            self.logger.debug('等待结束，开始执行重试sql')
+            self.sql_result2 = query_check.fetch_chall(sql_check)
+            # self.logger.debug('开始重试，需重试 {} 条数据'.format(len(self.sql_result2)))
+            # 重新获取代理IP池
             self.logger.debug('------------重新获取代理ip----------------')
             ips = requests.get(proxy_url)
             for ip in ips.text.split('\r\n'):
                 if len(ip) > 8:
                     ipPool.append('http://' + ip)
 
-            self.sql_result2 = query_check.fetch_chall(sql_check)
             for row in self.sql_result2:
                 if row[1] == 'US':
                     url = 'https://www.amazon.com/dp/' + str(row[0]) + '/?language=en_US'
@@ -140,7 +149,14 @@ class amazon_spider(Spider):
                     url = 'https://www.amazon.co.jp/dp/' + str(row[0]) + '/?language=ja_JP'
                     yield Request(url, meta={'asin': str(row[0]), 'station': 'JP', 'url': url},
                                   dont_filter=True, callback=self.parse_jp)
-            count = query_check.row_count(sql_check)
+                elif row[1] == 'CA':
+                    url = 'https://www.amazon.ca/dp/' + str(row[0]) + '/?language=en_US'
+                    yield Request(url, meta={'asin': str(row[0]), 'station': 'CA', 'url': url},
+                                  dont_filter=True, callback=self.parse_ca)
+                elif row[1] == 'MX':
+                    url = 'https://www.amazon.com.mx/dp/' + str(row[0])
+                    yield Request(url, meta={'asin': str(row[0]), 'station': 'MX', 'url': url},
+                                  dont_filter=True, callback=self.parse_mx)
             check_times += 1
 
 
