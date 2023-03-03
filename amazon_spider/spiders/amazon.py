@@ -94,7 +94,7 @@ class amazon_spider(Spider):
                 url = 'https://www.amazon.es/dp/' + str(row[0])
                 yield Request(url, meta={'asin': str(row[0]), 'station': 'ES', 'url': url}, callback=self.parse_es)
             elif row[1] == 'JP':
-                url = 'https://www.amazon.co.jp/dp/' + str(row[0]) + '/?language=ja_JP'
+                url = 'https://www.amazon.co.jp/dp/' + str(row[0]) + '/?language=ja_JP&currency=JPY'
                 yield Request(url, meta={'asin': str(row[0]), 'station': 'JP', 'url': url}, callback=self.parse_jp)
             elif row[1] == 'CA':
                 url = 'https://www.amazon.ca/dp/' + str(row[0]) + '/?language=en_US'

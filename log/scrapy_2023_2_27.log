@@ -1,0 +1,181 @@
+2023-02-27 16:16:56 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: amazon_spider)
+2023-02-27 16:16:56 [scrapy.utils.log] INFO: Versions: lxml 4.9.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.6.8 (tags/v3.6.8:3c6b436a57, Dec 24 2018, 00:16:47) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 3.4.8, Platform Windows-10-10.0.19041-SP0
+2023-02-27 16:16:56 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-02-27 16:16:57 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'amazon_spider',
+ 'CONCURRENT_REQUESTS': 24,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOADER_CLIENT_TLS_CIPHERS': 'DEFAULT:!DH',
+ 'DOWNLOAD_DELAY': 0.8,
+ 'DOWNLOAD_TIMEOUT': 300,
+ 'LOG_FILE': 'log/scrapy_2023_2_27.log',
+ 'NEWSPIDER_MODULE': 'amazon_spider.spiders',
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['amazon_spider.spiders']}
+2023-02-27 16:16:57 [scrapy.extensions.telnet] INFO: Telnet Password: a0983c9f944cd881
+2023-02-27 16:16:57 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2023-02-27 16:16:57 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'amazon_spider.middlewares.AmazonSpiderDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'amazon_spider.middlewares.fail_retry_middleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-02-27 16:16:57 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-02-27 16:16:57 [scrapy.middleware] INFO: Enabled item pipelines:
+['amazon_spider.pipelines.MysqlasynPipeline']
+2023-02-27 16:16:57 [scrapy.core.engine] INFO: Spider opened
+2023-02-27 16:16:57 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-02-27 16:16:57 [amazon_crawl] INFO: Spider opened: amazon_crawl
+2023-02-27 16:16:57 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: ------------获取首批代理ip----------------
+2023-02-27 16:16:57 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): 127.0.0.1:7890
+2023-02-27 16:16:57 [urllib3.connectionpool] DEBUG: http://127.0.0.1:7890 "GET http://api.xdaili.cn/xdaili-api//greatRecharge/getGreatIp?spiderId=460e34f07cf041899a22e79353081288&orderno=YZ2021112078186AsWJy&returnType=1&count=5 HTTP/1.1" 200 107
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; SV1; QQDownload 732; .NET4.0C; .NET4.0E; SE 2.X MetaSr 1.0)
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: 更换IP:http://140.250.149.99:38697-----0
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: 更换IP:http://120.34.231.146:34228-----1
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: 更换IP:http://140.250.149.99:38697-----2
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; Acoo Browser; SLCC1; .NET CLR 2.0.50727; Media Center PC 5.0; .NET CLR 3.0.04506)
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: 更换IP:http://140.250.149.99:38697-----3
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: 更换IP:http://117.69.147.205:24953-----4
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.16 (KHTML, like Gecko) Chrome/10.0.648.133 Safari/534.16
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: 更换IP:http://120.34.231.146:34228-----5
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (X11; U; Linux; en-US) AppleWebKit/527+ (KHTML, like Gecko, Safari/419.3) Arora/0.6
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: 更换IP:http://117.69.147.205:24953-----6
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.163 Safari/535.1
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: 更换IP:http://117.69.147.205:24953-----7
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; QQBrowser/7.0.3698.400)
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: 更换IP:http://117.57.36.103:35553-----8
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 5.1; U; en; rv:1.8.1) Gecko/20061208 Firefox/2.0.0 Opera 9.50
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: 更换IP:http://117.57.36.103:35553-----9
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.56 Safari/535.11 
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: 更换IP:http://49.88.213.41:20828-----10
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.71 Safari/537.1 LBBROWSER
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: 更换IP:http://120.34.231.146:34228-----11
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: 更换IP:http://117.57.36.103:35553-----12
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.71 Safari/537.1 LBBROWSER
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: 更换IP:http://117.57.36.103:35553-----13
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534.57.2 (KHTML, like Gecko) Version/5.1.7 Safari/534.57.2
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: 更换IP:http://117.69.147.205:24953-----14
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (Kresponse, like Gecko) Chrome/91.0.4472.114 Safari/537.36
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: 更换IP:http://117.57.36.103:35553-----15
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/535.20 (KHTML, like Gecko) Chrome/19.0.1036.7 Safari/535.20
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: 更换IP:http://49.88.213.41:20828-----16
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; QQDownload 732; .NET4.0C; .NET4.0E; LBBROWSER)
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: 更换IP:http://117.69.147.205:24953-----17
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: 更换IP:http://117.69.147.205:24953-----18
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 6.0; Trident/4.0; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET CLR 1.0.3705; .NET CLR 1.1.4322)
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: 更换IP:http://117.69.147.205:24953-----19
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: 更换IP:http://117.69.147.205:24953-----20
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; SV1; QQDownload 732; .NET4.0C; .NET4.0E; SE 2.X MetaSr 1.0)
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: 更换IP:http://117.69.147.205:24953-----21
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/535.20 (KHTML, like Gecko) Chrome/19.0.1036.7 Safari/535.20
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: 更换IP:http://120.34.231.146:34228-----22
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)
+2023-02-27 16:16:57 [amazon_crawl] DEBUG: 更换IP:http://120.34.231.146:34228-----23
+2023-02-27 16:17:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.de/dp/B000U77Z9C/?language=de_DE> (referer: None)
+2023-02-27 16:17:02 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50
+2023-02-27 16:17:02 [amazon_crawl] DEBUG: 更换IP:http://140.250.149.99:38697-----24
+2023-02-27 16:17:02 [amazon_spider.spiders.amazon] WARNING: 邮编出错！
+https://www.amazon.de/dp/B000U77Z9C/?language=de_DE
+2023-02-27 16:17:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.de/dp/B000U77Z9C/?language=de_DE>
+None
+2023-02-27 16:17:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.es/dp/B001DJIARW> (referer: None)
+2023-02-27 16:17:02 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50
+2023-02-27 16:17:02 [amazon_crawl] DEBUG: 更换IP:http://117.69.147.205:24953-----25
+2023-02-27 16:17:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.com/dp/B0000223IZ/?language=en_US> (referer: None)
+2023-02-27 16:17:02 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (X11; U; Linux; en-US) AppleWebKit/527+ (KHTML, like Gecko, Safari/419.3) Arora/0.6
+2023-02-27 16:17:02 [amazon_crawl] DEBUG: 更换IP:http://117.57.36.103:35553-----26
+2023-02-27 16:17:02 [amazon_spider.spiders.amazon] WARNING: 邮编出错！
+https://www.amazon.es/dp/B001DJIARW
+2023-02-27 16:17:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.es/dp/B001DJIARW>
+None
+2023-02-27 16:17:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.com/dp/B0000223IZ/?language=en_US>
+None
+2023-02-27 16:17:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.de/dp/B000MQ7E06/?language=de_DE> (referer: None)
+2023-02-27 16:17:03 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 6.0; Trident/4.0; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET CLR 1.0.3705; .NET CLR 1.1.4322)
+2023-02-27 16:17:03 [amazon_crawl] DEBUG: 更换IP:http://117.57.36.103:35553-----27
+2023-02-27 16:17:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.fr/dp/B002YMWUGE> (referer: None)
+2023-02-27 16:17:03 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (iPad; U; CPU OS 4_2_1 like Mac OS X; zh-cn) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.5
+2023-02-27 16:17:03 [amazon_crawl] DEBUG: 更换IP:http://117.57.36.103:35553-----28
+2023-02-27 16:17:03 [amazon_spider.spiders.amazon] WARNING: 邮编出错！
+https://www.amazon.de/dp/B000MQ7E06/?language=de_DE
+2023-02-27 16:17:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.de/dp/B000MQ7E06/?language=de_DE>
+None
+2023-02-27 16:17:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.fr/dp/B002YMWUGE>
+None
+2023-02-27 16:17:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.fr/dp/B003HI1BBO> (referer: None)
+2023-02-27 16:17:04 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET CLR 2.0.50727; Media Center PC 6.0)
+2023-02-27 16:17:04 [amazon_crawl] DEBUG: 更换IP:http://49.88.213.41:20828-----29
+2023-02-27 16:17:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.fr/dp/B003HI1BBO>
+None
+2023-02-27 16:17:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.amazon.com/dp/B0000AXOHT/?language=en_US> (referer: None)
+2023-02-27 16:17:04 [amazon_crawl] DEBUG: [User-Agent]: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11
+2023-02-27 16:17:04 [amazon_crawl] DEBUG: 更换IP:http://117.57.36.103:35553-----30
+2023-02-27 16:17:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.amazon.com/dp/B0000AXOHT/?language=en_US>
+None
+2023-02-27 16:18:06 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: amazon_spider)
+2023-02-27 16:18:06 [scrapy.utils.log] INFO: Versions: lxml 4.9.1.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.7.0, Python 3.6.8 (tags/v3.6.8:3c6b436a57, Dec 24 2018, 00:16:47) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 3.4.8, Platform Windows-10-10.0.19041-SP0
+2023-02-27 16:18:06 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-02-27 16:18:06 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'amazon_spider',
+ 'CONCURRENT_REQUESTS': 24,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOADER_CLIENT_TLS_CIPHERS': 'DEFAULT:!DH',
+ 'DOWNLOAD_DELAY': 0.8,
+ 'DOWNLOAD_TIMEOUT': 300,
+ 'LOG_FILE': 'log/scrapy_2023_2_27.log',
+ 'NEWSPIDER_MODULE': 'amazon_spider.spiders',
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['amazon_spider.spiders']}
+2023-02-27 16:18:06 [scrapy.extensions.telnet] INFO: Telnet Password: 742c32a2918aeeed
+2023-02-27 16:18:06 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2023-02-27 16:18:07 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'amazon_spider.middlewares.AmazonSpiderDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'amazon_spider.middlewares.fail_retry_middleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-02-27 16:18:07 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-02-27 16:18:07 [scrapy.middleware] INFO: Enabled item pipelines:
+['amazon_spider.pipelines.MysqlasynPipeline']
+2023-02-27 16:18:07 [scrapy.core.engine] INFO: Spider opened
+2023-02-27 16:18:07 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-02-27 16:18:07 [amazon_crawl] INFO: Spider opened: amazon_crawl
+2023-02-27 16:18:07 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-02-27 16:18:07 [amazon_crawl] DEBUG: ------------获取首批代理ip----------------
